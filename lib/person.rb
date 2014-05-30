@@ -1,3 +1,5 @@
+Dir["./lib/*.rb"].each {|file| require file}
+
 class Person
 
 	def initialize(bike=nil)
@@ -12,8 +14,13 @@ class Person
 		@bike.break!
 	end
 
-	def rent_bike_from(station)
-		@bike = station.release
+	def return_to(station)
+		station.accept(@bike) if has_bike?
+		@bike = nil
+	end
+
+	def rent_bike_from(station, bike)
+		@bike = station.release(bike) if !has_bike?
 	end
 
 end

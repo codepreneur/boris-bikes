@@ -2,6 +2,7 @@ module BikeContainer
 
 	DEFAULT_CAPACITY = 20
 
+
 	def empty?
 		!@bikes.any?
 	end
@@ -27,8 +28,17 @@ module BikeContainer
 		@capacity = value
 	end
 
-	def capacity
+	def capacity 
 		@capacity ||= DEFAULT_CAPACITY
 	end
+
+	def fixed_bikes
+		bikes.select{|bike| !bike.broken?} #wait til Sasha remembers this not working example
+	end
+
+	def broken_bikes
+		bikes.select{|bike| bike.broken? }.sample
+	end
+
 
 end
