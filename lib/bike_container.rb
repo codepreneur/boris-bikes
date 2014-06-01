@@ -25,7 +25,7 @@ module BikeContainer
 	end	
 
 	def release_multiple(bicycles)
-		bikes - bicycles
+		bikes.keep_if{|bike| !bicycles.include? bike}
 	end
 
 
