@@ -20,6 +20,7 @@ module BikeContainer
 		bikes.delete(bike)
 	end
 
+
 	def full?
 		bikes.count == capacity
 	end
@@ -33,7 +34,7 @@ module BikeContainer
 	end
 
 	def fixed_bikes
-		bikes.select{|bike| !bike.broken?} #wait til Sasha remembers this not working example
+		bikes.select{|bike| !bike.broken?} 
 	end
 
 	def broken_bikes

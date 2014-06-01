@@ -13,7 +13,6 @@ describe Garage do
 		garage.accept(bike)
 		expect(bike).to receive(:fix!)
 		garage.fix_bikes
-		
 	end
 
 
