@@ -20,6 +20,14 @@ module BikeContainer
 		bikes.delete(bike)
 	end
 
+	def accept_multiple(bicycles)
+		bikes.concat(bicycles) unless full?
+	end	
+
+	def release_multiple(bicycles)
+		bikes - bicycles
+	end
+
 
 	def full?
 		bikes.count == capacity
