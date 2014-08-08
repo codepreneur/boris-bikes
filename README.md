@@ -1,21 +1,42 @@
 Boris Bikes
 ===========
 
+Week 3 project @ Makers Academy.
+
 Simple application that uses OOP and TDD principles.
 
-This branch is for chicago style TDD, where real objects are being used to
-test as opposed to symbols and doubles.
+The goal of this project was to introduce us to Object-Oriented Programming (OOP) and show us the very basics of Object-Oriented Design (OOD).
 
-The latter means that my thought processes have to be interupted i.e.
-I have to stop what I am doing and create an object before I can use it.
+This branch is for chicago style TDD.
+
+Brief Description
+-----------------
+
+We creating a simple system for managing Boris Bikes in London. Our system keeps track of a number of docking stations and the bikes. It allows us to rent the bikes and return them. Occasionally the bikes will break and then they will be unavailable for rental. There will also be a garage to fix the bikes and a van to move the bikes between the stations and the garage.
+
+
+<b>Classes</b>
+- Person
+- Bike
+- Garage
+- Station
+- Van
+- Errors
+
+<b>Module</b>
+- BikeContainer (used by Garage, Station and Van classes)
+
+Technologies used
+-----------------
+
+* Ruby
+* RSpec
 
 How to use
 ----------
 
-Open `irb` and `require` files of classes that you plan to use.
-
-For example:
-
+```shell
+irb
+require './lib/boris_bikes'
 ```
-require './lib/bike'
-```
+
